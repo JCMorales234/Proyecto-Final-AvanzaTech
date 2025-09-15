@@ -1,0 +1,217 @@
+/* ================================================
+   CAROUSEL.CSS - Carrusel de productos refactorizado
+   ================================================ */
+
+/* ===============================
+   TÍTULOS DE SECCIÓN
+   =============================== */
+.seccion-titulo {
+    text-align: center;
+    margin: 60px 0 40px 0;
+}
+
+.seccion-titulo h2 {
+    font-size: 3rem;
+    background: linear-gradient(135deg, #ffffff, #ff9800, #ffcc80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(255, 152, 0, 0.3);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* ===============================
+   WRAPPER DEL CARRUSEL
+   =============================== */
+.carrousel-wrapper {
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+}
+
+/* ===============================
+   CONTENEDOR PRINCIPAL DEL CARRUSEL
+   =============================== */
+.contenedor-carrousel {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    padding: 20px 0; /* Revertido: Padding vertical en el contenedor */
+}
+
+/* ===============================
+   MOTOR DEL CARRUSEL
+   =============================== */
+.motor-carrousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+    width: fit-content;
+    padding: 0 20px; /* Revertido: Padding horizontal en el motor */
+}
+
+/* ===============================
+   ITEMS DEL CARRUSEL
+   =============================== */
+.item-carrousel {
+    flex: 0 0 280px;
+    width: 280px;
+    height: 420px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-carrousel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 152, 0, 0.3);
+    border-color: rgba(255, 152, 0, 0.5);
+}
+
+/* ===============================
+   IMAGEN DEL PRODUCTO
+   =============================== */
+.producto-imagen-container {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 15px;
+    flex-shrink: 0; /* Evita que el contenedor de la imagen se encoja */
+}
+
+.item-carrousel img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* ===============================
+   CONTENIDO DEL PRODUCTO
+   =============================== */
+.producto-contenido {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.item-carrousel h4 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.3;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word; /* Romper palabras largas para que no alteren el ancho */
+}
+
+.item-carrousel .precio {
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, #ff9800, #ffcc80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+/* ===============================
+   BOTÓN VER DETALLES
+   =============================== */
+.producto-acciones {
+    margin-top: auto;
+}
+
+.btn-ver-detalles {
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #ff9800, #ffcc80);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-ver-detalles:hover {
+    background: linear-gradient(135deg, #f57c00, #ff9800);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
+}
+
+/* ===============================
+   NAVEGACIÓN DEL CARRUSEL
+   =============================== */
+.navegacion-carrousel {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.btn-carrousel {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 152, 0, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.btn-carrousel:hover {
+    background: rgba(245, 124, 0, 1);
+    transform: scale(1.1);
+}
+
+.btn-carrousel:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(40%);
+}
+
+/* ===============================
+   ESTADOS DE CARGA Y ERROR
+   =============================== */
+.loading {
+    text-align: center;
+    padding: 60px;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+.error {
+    text-align: center;
+    padding: 40px;
+    color: #ff6b6b;
+    font-size: 1.1rem;
+}

@@ -1,0 +1,461 @@
+/* ================================================
+   RESPONSIVE.CSS - Media queries y diseño adaptivo
+   ================================================ */
+
+/* ===============================
+   TABLET - 768px y menor
+   =============================== */
+@media (max-width: 768px) {
+    /* Títulos principales en tablets */
+    main > section:first-child {
+        padding: 40px 20px 60px 20px;
+        min-height: 40vh;
+    }
+    
+    main > section:first-child h1 {
+        font-size: 3.2rem;
+        letter-spacing: 1px;
+        text-shadow: 0 0 30px rgba(255, 152, 0, 0.4);
+    }
+    
+    main > section:first-child h2 {
+        font-size: 1.5rem;
+        max-width: 600px;
+        text-shadow: 0 0 15px rgba(255, 152, 0, 0.3);
+    }
+
+    /* Botón del carrito en tablets */
+    .bCompra {
+        min-width: 100px;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .bCompra a {
+        font-size: 16px;
+    }
+
+    /* Footer responsive */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand {
+        margin-bottom: 20px;
+    }
+    
+    .footer-social {
+        margin-bottom: 20px;
+    }
+    
+    .footer-links {
+        justify-content: center;
+        text-align: left;
+        gap: 30px;
+    }
+
+    /* Carrusel responsive */
+    .item-carrousel {
+        min-width: 280px;
+        padding: 18px 18px 25px 18px; /* Más padding inferior en móviles */
+        height: 450px; /* Altura ajustada para móviles con más espacio */
+    }
+    
+    .item-carrousel img {
+        height: 160px; /* Imagen más pequeña en móviles */
+        max-width: 90%; /* Limita el ancho en móviles */
+    }
+    
+    .item-carrousel h4 {
+        font-size: 1.1rem;
+    }
+    
+    .item-carrousel .precio {
+        font-size: 1.4rem;
+    }
+    
+    .btn-ver-detalles {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    
+    .seccion-titulo h2 {
+        font-size: 2.2rem;
+    }
+    
+    .contenedor-carrousel {
+        padding: 20px 15px 50px 15px; /* Más padding inferior en móviles */
+        margin: 0 10px 50px 10px;
+        border-radius: 20px;
+        min-height: 540px; /* Altura mínima para móviles aumentada */
+        overflow-x: hidden; /* Controlamos desbordamiento horizontal en móviles */
+        overflow-y: visible; /* Permitimos visibilidad vertical en móviles */
+    }
+    
+    .btn-carrousel {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+    
+    .btn-izquierda-carrousel {
+        left: 10px;
+    }
+    
+    .btn-derecha-carrousel {
+        right: 10px;
+    }
+    
+    .carrousel-indicators {
+        margin-top: 20px;
+        gap: 8px;
+    }
+    
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Página de detalles responsive */
+    .producto-detalle {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+    
+    .producto-info h1 {
+        font-size: 2rem;
+    }
+    
+    .producto-precio span {
+        font-size: 2.5rem;
+    }
+    
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cantidad-selector {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* ===============================
+   MÓVIL - 480px y menor
+   =============================== */
+@media (max-width: 480px) {
+    /* Títulos principales en móviles */
+    main > section:first-child {
+        padding: 30px 15px 50px 15px;
+        min-height: 35vh;
+    }
+    
+    main > section:first-child h1 {
+        font-size: 2.5rem;
+        letter-spacing: 0px;
+        text-shadow: 0 0 25px rgba(255, 152, 0, 0.4);
+    }
+    
+    main > section:first-child h2 {
+        font-size: 1.2rem;
+        max-width: 300px;
+        letter-spacing: 0px;
+        text-shadow: 0 0 15px rgba(255, 152, 0, 0.3);
+    }
+
+    /* Botón del carrito en móviles */
+    .bCompra {
+        min-width: 90px;
+        padding: 8px 14px;
+        font-size: 12px;
+        border-radius: var(--border-radius-medium);
+    }
+
+    .bCompra a {
+        font-size: 14px;
+    }
+
+    /* Formularios más compactos en móviles */
+    .sesion, .registro {
+        max-width: 350px;
+        padding: 30px 25px;
+    }
+    
+    /* Carrusel móvil */
+    .item-carrousel {
+        min-width: 260px;
+        padding: 15px;
+    }
+    
+    .motor-carrousel {
+        gap: 15px;
+        padding: 10px 5px;
+    }
+    
+    .seccion-titulo h2 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    
+    .contenedor-carrousel {
+        margin: 0 5px 40px 5px;
+        padding: 15px 10px;
+    }
+    
+    .carrousel-indicators {
+        margin-top: 15px;
+        gap: 6px;
+    }
+    
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Lista de productos móvil */
+    #laptop-lista {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+
+    .laptop-card {
+        padding: 0.75rem;
+    }
+
+    .laptop-img {
+        height: 150px;
+    }
+}
+
+/* ===============================
+   MÓVIL PEQUEÑO - 360px y menor
+   =============================== */
+@media (max-width: 360px) {
+    /* Botón del carrito en móviles muy pequeños */
+    .bCompra {
+        min-width: 80px;
+        padding: 6px 12px;
+        font-size: 11px;
+        border-radius: 8px;
+    }
+
+    .bCompra a {
+        font-size: 12px;
+    }
+
+    /* Footer ajustado para móviles pequeños */
+    .site-footer {
+        padding: 30px 15px;
+    }
+    
+    /* Formularios más compactos */
+    .sesion, .registro {
+        max-width: 300px;
+        padding: 25px 20px;
+    }
+    .seccion-titulo h2 {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .contenedor-carrousel {
+        margin: 0 5px 30px 5px;
+        padding: 10px 5px;
+        min-height: 500px;
+    }
+    
+    .item-carrousel {
+        min-width: 240px;
+        height: 420px;
+        padding: 12px;
+    }
+    
+    .item-carrousel img {
+        height: 140px;
+        max-width: 85%; /* Limita el ancho en móviles pequeños */
+    }
+    
+    .item-carrousel h4 {
+        font-size: 1rem;
+    }
+    
+    .item-carrousel .precio {
+        font-size: 1.2rem;
+    }
+    
+    .btn-ver-detalles {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .btn-carrousel {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* ===============================
+   PANTALLAS GRANDES - 1200px y mayor
+   =============================== */
+@media (min-width: 1200px) {
+    .contenedor-carrousel {
+        max-width: 1600px;
+        padding: 40px 30px 70px 30px;
+    }
+    
+    .item-carrousel {
+        min-width: 350px;
+        height: 520px;
+        padding: 25px;
+    }
+    
+    .item-carrousel img {
+        height: 220px;
+        max-width: 100%; /* En pantallas grandes puede usar todo el ancho */
+    }
+    
+    .item-carrousel h4 {
+        font-size: 1.4rem;
+    }
+    
+    .item-carrousel .precio {
+        font-size: 1.8rem;
+    }
+    
+    .btn-ver-detalles {
+        padding: 16px 24px;
+        font-size: 1.1rem;
+    }
+    
+    .seccion-titulo h2 {
+        font-size: 3.5rem;
+    }
+}
+
+/* ===============================
+   MODO HORIZONTAL EN TABLETS
+   =============================== */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .contenedor-carrousel {
+        min-height: 480px;
+        padding: 25px 15px 50px 15px;
+    }
+    
+    .item-carrousel {
+        height: 420px;
+        min-width: 300px;
+    }
+    
+    .item-carrousel img {
+        height: 180px;
+    }
+}
+
+/* ===============================
+   PREFERENCIAS DE ACCESIBILIDAD
+   =============================== */
+@media (prefers-reduced-motion: reduce) {
+    .item-carrousel,
+    .btn-carrousel,
+    .indicator,
+    .btn-ver-detalles {
+        transition: none;
+        animation: none;
+    }
+    
+    .motor-carrousel {
+        transition: none;
+    }
+}
+
+/* ===============================
+   MODO OSCURO (SI EL USUARIO LO PREFIERE)
+   =============================== */
+@media (prefers-color-scheme: dark) {
+    .laptop-card {
+        background-color: #2a2a2a;
+        color: var(--text-white);
+        border: 1px solid #444;
+    }
+    
+    .laptop-card h3 {
+        color: var(--primary-orange);
+    }
+    
+    /* Estilos de contacto removidos - ahora se manejan con mayor especificidad en pages.css */
+}
+
+/* ===============================
+   RESPONSIVE PARA CARRITO
+   =============================== */
+@media (max-width: 768px) {
+    .carrito-contenido {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .carrito-resumen {
+        order: -1; /* Mostrar resumen arriba en móviles */
+    }
+    
+    .carrito-item {
+        grid-template-columns: 80px 1fr auto;
+        gap: 15px;
+    }
+    
+    .cantidad-controls {
+        grid-column: 2 / -1;
+        justify-self: start;
+        margin-top: 10px;
+    }
+    
+    .btn-eliminar {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    
+    .carrito-header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carrito-container {
+        padding: 20px 15px;
+    }
+    
+    .carrito-items,
+    .carrito-resumen {
+        padding: 20px;
+    }
+    
+    .carrito-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    .item-imagen {
+        width: 80px;
+        height: 60px;
+        justify-self: center;
+    }
+    
+    .cantidad-controls,
+    .btn-eliminar {
+        justify-self: center;
+    }
+    
+    .notificacion {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}

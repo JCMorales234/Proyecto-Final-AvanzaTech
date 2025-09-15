@@ -1,0 +1,29 @@
+{
+  "name": "nexus-tech",
+  "version": "1.0.0",
+  "description": "E-commerce de tecnología con Frontend y Backend",
+  "main": "Backend/server.js",
+  "scripts": {
+    "dev": "cd Backend && npm run dev",
+    "start": "cd Backend && npm start",
+    "build": "echo 'Build completed - Static files ready'",
+    "install-backend": "cd Backend && npm install",
+    "vercel-build": "npm run install-backend"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "keywords": [
+    "ecommerce",
+    "tecnologia",
+    "vercel",
+    "nodejs",
+    "express"
+  ],
+  "author": "Nexus Tech Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "tu-repositorio-github"
+  }
+}

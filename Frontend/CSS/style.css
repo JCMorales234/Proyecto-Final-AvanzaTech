@@ -1,0 +1,21 @@
+
+
+/* Importamos todos los módulos CSS organizados */
+
+/* 1. Base: Reset, variables y configuración fundamental */
+@import url('./base.css');
+
+/* 2. Layout: Header, footer, navegación y estructura general */
+@import url('./layout/layout.css');
+
+/* 3. Componentes: Carrusel y otros componentes reutilizables */
+@import url('./components/carousel.css');
+
+/* 4. Páginas: Estilos específicos para cada página */
+@import url('./pages/pages.css');
+
+/* 5. Responsive: Media queries y diseño adaptivo */
+@import url('./responsive/responsive.css');
+
+
+
